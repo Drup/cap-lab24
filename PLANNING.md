@@ -94,3 +94,7 @@ _Academic first semester 2024-2025_
 
     * Smart Register Allocation [TP05b](TP05/tp5b.pdf).
     * Code in [MiniC/TP04/](MiniC/TP05/).
+
+- :book: Course: Thursday 7/11/2024, 10h15-12h15. Amphi B (Gabriel Radanne)
+
+  * Beyond Imperative [slides in english](course/cap_cours_bonuscomp.pdf).
