@@ -98,3 +98,7 @@ _Academic first semester 2024-2025_
 - :book: Course: Thursday 7/11/2024, 10h15-12h15. Amphi B (Gabriel Radanne)
 
   * Beyond Imperative [slides in english](course/cap_cours_bonuscomp.pdf).
+
+# Week 9:
+
+- :hammer: Lab 5b (2/2): Monday 18/11/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
