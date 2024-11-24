@@ -31,7 +31,7 @@ _Academic first semester 2024-2025_
 
 # Week 3:
 
-- :hammer: Lab 2: Thursday 23/09/2023, 13h30-15h30. Room E001 103 & -138 (Grenat) (Samuel Humeau & Emma Nardino)
+- :hammer: Lab 2: Thursday 23/09/2024, 13h30-15h30. Room E001 103 & -138 (Grenat) (Samuel Humeau & Emma Nardino)
 
   * Lexing & Parsing with ANTLR4 [TP02](TP02/tp2.pdf).
   * Code in [TP02/](TP02/).
@@ -90,7 +90,7 @@ _Academic first semester 2024-2025_
 
 # Week 8:
 
-- :hammer: Lab 5b (1/2): Monday 04/11/2023, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
+- :hammer: Lab 5b (1/2): Monday 04/11/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
 
     * Smart Register Allocation [TP05b](TP05/tp5b.pdf).
     * Code in [MiniC/TP04/](MiniC/TP05/).
@@ -102,3 +102,7 @@ _Academic first semester 2024-2025_
 # Week 9:
 
 - :hammer: Lab 5b (2/2): Monday 18/11/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
+
+# Week 10:
+
+- :notebook: TD: Thursday 25/11/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
