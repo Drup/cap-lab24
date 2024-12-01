@@ -105,4 +105,11 @@ _Academic first semester 2024-2025_
 
 # Week 10:
 
-- :notebook: TD: Thursday 25/11/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
+- :notebook: TD: Monday 25/11/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
+
+# Week 11:
+
+- :hammer: Choice Lab (1/3): Monday 02/12/2024, 8h00-13h30. Room E001 (Samuel Humeau & Emma Nardino)
+
+    * Optimisations under SSA form [TP5c](TP05/tp5c.pdf), code in [MiniC/TPoptim/](MiniC/TPoptim/).
+    * Other possibilities next week.

@@ -102,7 +102,7 @@
 
 
 <div class="viewcode-block" id="Block"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block">[docs]</a><span class="k">class</span> <span class="nc">Block</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A basic block of a :py:class:`CFG` is made of three main parts:</span>
 
 <span class="sd">    - a start :py:class:`label &lt;Lib.Statement.Label&gt;` that uniquely identifies the block in the CFG</span>
@@ -138,7 +138,7 @@
         <span class="k">return</span> <span class="n">s</span>
 
 <div class="viewcode-block" id="Block.to_dot"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.to_dot">[docs]</a>    <span class="k">def</span> <span class="nf">to_dot</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
-        <span class="sd">&quot;&quot;&quot;Outputs all statements of the block as a string.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Outputs all statements of the block as a string.&quot;&quot;&quot;</span>
         <span class="c1"># dot is weird: lines ending with \l instead of \n are left-aligned.</span>
         <span class="n">NEWLINE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">l    &#39;</span>
         <span class="n">instr</span> <span class="o">=</span> <span class="p">[]</span>
@@ -153,11 +153,11 @@
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_label</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Block.get_body"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.get_body">[docs]</a>    <span class="k">def</span> <span class="nf">get_body</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BlockInstr</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the statements in the body of the block (no phi-node nor the terminator).&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the statements in the body of the block (no phi-node nor the terminator).&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_instructions</span></div>
 
 <div class="viewcode-block" id="Block.get_all_statements"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.get_all_statements">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_statements</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Statement</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return all statements of the block</span>
 <span class="sd">        (including phi-nodes and the terminator, but not the label of the block).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -166,7 +166,7 @@
                 <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_terminator</span><span class="p">()])</span></div>
 
 <div class="viewcode-block" id="Block.get_body_and_terminator"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.get_body_and_terminator">[docs]</a>    <span class="k">def</span> <span class="nf">get_body_and_terminator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Statement</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return all statements of the block, except phi-nodes</span>
 <span class="sd">        (and the label of the block).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -174,39 +174,39 @@
                 <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_terminator</span><span class="p">()])</span></div>
 
 <div class="viewcode-block" id="Block.get_label"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.get_label">[docs]</a>    <span class="k">def</span> <span class="nf">get_label</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Label</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the label of the block.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the label of the block.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_label</span></div>
 
 <div class="viewcode-block" id="Block.get_in"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.get_in">[docs]</a>    <span class="k">def</span> <span class="nf">get_in</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s1">&#39;Block&#39;</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the list of blocks with an edge to the considered block.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the list of blocks with an edge to the considered block.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_in</span></div>
 
 <div class="viewcode-block" id="Block.get_terminator"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.get_terminator">[docs]</a>    <span class="k">def</span> <span class="nf">get_terminator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Terminator</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the terminator of the block.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the terminator of the block.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_terminator</span></div>
 
 <div class="viewcode-block" id="Block.set_terminator"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.set_terminator">[docs]</a>    <span class="k">def</span> <span class="nf">set_terminator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span> <span class="n">Terminator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Set the terminator of the block.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the terminator of the block.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_terminator</span> <span class="o">=</span> <span class="n">term</span></div>
 
 <div class="viewcode-block" id="Block.get_phis"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.get_phis">[docs]</a>    <span class="k">def</span> <span class="nf">get_phis</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Statement</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the list of all φ instructions of the block.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the list of all φ instructions of the block.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_phis</span></div>
 
 <div class="viewcode-block" id="Block.add_phi"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.add_phi">[docs]</a>    <span class="k">def</span> <span class="nf">add_phi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phi</span><span class="p">:</span> <span class="n">Statement</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add a φ instruction to the block.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a φ instruction to the block.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_phis</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">phi</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Block.set_phis"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.set_phis">[docs]</a>    <span class="k">def</span> <span class="nf">set_phis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phis</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Statement</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Replace the φ instructions in the block by the given list `phis`.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Replace the φ instructions in the block by the given list `phis`.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_phis</span> <span class="o">=</span> <span class="n">phis</span></div>
 
 <div class="viewcode-block" id="Block.remove_all_phis"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.remove_all_phis">[docs]</a>    <span class="k">def</span> <span class="nf">remove_all_phis</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Remove all φ instructions in the block.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove all φ instructions in the block.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_phis</span> <span class="o">=</span> <span class="p">[]</span></div>
 
 <div class="viewcode-block" id="Block.iter_statements"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.iter_statements">[docs]</a>    <span class="k">def</span> <span class="nf">iter_statements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Iterate over instructions.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Iterate over instructions.</span>
 <span class="sd">        For each real instruction i (not label or comment), replace it</span>
 <span class="sd">        with the list of instructions given by f(i).</span>
 
@@ -225,12 +225,12 @@
                 <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_terminator</span><span class="p">(),</span> <span class="n">end_statements</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="Block.add_instruction"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.Block.add_instruction">[docs]</a>    <span class="k">def</span> <span class="nf">add_instruction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instr</span><span class="p">:</span> <span class="n">BlockInstr</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add an instruction to the body of the block.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add an instruction to the body of the block.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_instructions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">instr</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="CFG"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG">[docs]</a><span class="k">class</span> <span class="nc">CFG</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A complete control-flow graph representing a function.</span>
 <span class="sd">    This class is mainly made of a list of basic :py:class:`Block`,</span>
 <span class="sd">    a label indicating the :py:meth:`entry point of the function &lt;get_start&gt;`,</span>
@@ -254,7 +254,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fdata</span><span class="o">.</span><span class="n">fresh_label</span><span class="p">(</span><span class="s2">&quot;end&quot;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_init_blks</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add a block for division by 0.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a block for division by 0.&quot;&quot;&quot;</span>
         <span class="c1"># Label for the address of the error message</span>
         <span class="c1"># This address is added by print_code</span>
         <span class="n">label_div_by_zero_msg</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fdata</span><span class="o">.</span><span class="n">_label_div_by_zero</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;_msg&quot;</span><span class="p">)</span>
@@ -267,53 +267,53 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add_block</span><span class="p">(</span><span class="n">blk</span><span class="p">)</span>
 
 <div class="viewcode-block" id="CFG.get_start"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.get_start">[docs]</a>    <span class="k">def</span> <span class="nf">get_start</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Label</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the entry label of the CFG.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the entry label of the CFG.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start</span></div>
 
 <div class="viewcode-block" id="CFG.set_start"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.set_start">[docs]</a>    <span class="k">def</span> <span class="nf">set_start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="n">Label</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Set the entry label of the CFG.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the entry label of the CFG.&quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="p">(</span><span class="n">start</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blocks</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_start</span> <span class="o">=</span> <span class="n">start</span></div>
 
 <div class="viewcode-block" id="CFG.get_end"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.get_end">[docs]</a>    <span class="k">def</span> <span class="nf">get_end</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Label</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the exit label of the CFG.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the exit label of the CFG.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_end</span></div>
 
 <div class="viewcode-block" id="CFG.add_block"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.add_block">[docs]</a>    <span class="k">def</span> <span class="nf">add_block</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blk</span><span class="p">:</span> <span class="n">Block</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add a new block to the CFG.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a new block to the CFG.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_blocks</span><span class="p">[</span><span class="n">blk</span><span class="o">.</span><span class="n">_label</span><span class="p">]</span> <span class="o">=</span> <span class="n">blk</span></div>
 
 <div class="viewcode-block" id="CFG.get_block"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.get_block">[docs]</a>    <span class="k">def</span> <span class="nf">get_block</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Label</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Block</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the block with label `name`.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the block with label `name`.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blocks</span><span class="p">[</span><span class="n">name</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="CFG.get_blocks"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.get_blocks">[docs]</a>    <span class="k">def</span> <span class="nf">get_blocks</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Block</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return all the blocks.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all the blocks.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blocks</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span></div>
 
 <div class="viewcode-block" id="CFG.get_entries"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.get_entries">[docs]</a>    <span class="k">def</span> <span class="nf">get_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Block</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return all the blocks with no predecessors.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all the blocks with no predecessors.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blocks</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">b</span><span class="o">.</span><span class="n">get_in</span><span class="p">()]</span></div>
 
 <div class="viewcode-block" id="CFG.add_edge"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.add_edge">[docs]</a>    <span class="k">def</span> <span class="nf">add_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">:</span> <span class="n">Block</span><span class="p">,</span> <span class="n">dest</span><span class="p">:</span> <span class="n">Block</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add the edge src -&gt; dest in the control flow graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add the edge src -&gt; dest in the control flow graph.&quot;&quot;&quot;</span>
         <span class="n">dest</span><span class="o">.</span><span class="n">get_in</span><span class="p">()</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">src</span><span class="p">)</span></div>
         <span class="c1"># assert (dest.get_label() in src.get_terminator().targets())</span>
 
 <div class="viewcode-block" id="CFG.remove_edge"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.remove_edge">[docs]</a>    <span class="k">def</span> <span class="nf">remove_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">:</span> <span class="n">Block</span><span class="p">,</span> <span class="n">dest</span><span class="p">:</span> <span class="n">Block</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Remove the edge src -&gt; dest in the control flow graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove the edge src -&gt; dest in the control flow graph.&quot;&quot;&quot;</span>
         <span class="n">dest</span><span class="o">.</span><span class="n">get_in</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">src</span><span class="p">)</span></div>
         <span class="c1"># assert (dest.get_label() not in src.get_terminator().targets())</span>
 
 <div class="viewcode-block" id="CFG.out_blocks"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.out_blocks">[docs]</a>    <span class="k">def</span> <span class="nf">out_blocks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">block</span><span class="p">:</span> <span class="n">Block</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Block</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the list of blocks in the CFG targeted by</span>
 <span class="sd">        the Terminator of Block block.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_block</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span> <span class="k">for</span> <span class="n">dest</span> <span class="ow">in</span> <span class="n">block</span><span class="o">.</span><span class="n">get_terminator</span><span class="p">()</span><span class="o">.</span><span class="n">targets</span><span class="p">()]</span></div>
 
 <div class="viewcode-block" id="CFG.gather_defs"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.gather_defs">[docs]</a>    <span class="k">def</span> <span class="nf">gather_defs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="n">Block</span><span class="p">]]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return a dictionary associating variables to all the blocks</span>
 <span class="sd">        containing one of their definitions.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -328,12 +328,12 @@
         <span class="k">return</span> <span class="n">defs</span></div>
 
 <div class="viewcode-block" id="CFG.iter_statements"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.iter_statements">[docs]</a>    <span class="k">def</span> <span class="nf">iter_statements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Apply f to all instructions in all the blocks.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply f to all instructions in all the blocks.&quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_blocks</span><span class="p">():</span>
             <span class="n">b</span><span class="o">.</span><span class="n">iter_statements</span><span class="p">(</span><span class="n">f</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="CFG.linearize_naive"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.linearize_naive">[docs]</a>    <span class="k">def</span> <span class="nf">linearize_naive</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Statement</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Linearize the given control flow graph as a list of instructions.</span>
 <span class="sd">        Naive procedure that adds jumps everywhere.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -353,13 +353,13 @@
 
 <div class="viewcode-block" id="CFG.print_code"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.print_code">[docs]</a>    <span class="k">def</span> <span class="nf">print_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">linearize</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">cfg</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">linearize_naive</span><span class="p">())),</span>
                    <span class="n">comment</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Print the linearization of the CFG.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Print the linearization of the CFG.&quot;&quot;&quot;</span>
         <span class="n">statements</span> <span class="o">=</span> <span class="n">linearize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
         <span class="n">_print_code</span><span class="p">(</span><span class="n">statements</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fdata</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">init_label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_start</span><span class="p">,</span>
                     <span class="n">fin_label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_end</span><span class="p">,</span> <span class="n">fin_div0</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="n">comment</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="CFG.print_dot"><a class="viewcode-back" href="../../api/Lib.CFG.html#Lib.CFG.CFG.print_dot">[docs]</a>    <span class="k">def</span> <span class="nf">print_dot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">DF</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
-        <span class="sd">&quot;&quot;&quot;Print the CFG as a graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Print the CFG as a graph.&quot;&quot;&quot;</span>
         <span class="n">graph</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">()</span>
         <span class="c1"># nodes</span>
         <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">blk</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blocks</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>

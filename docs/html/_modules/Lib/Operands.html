@@ -118,7 +118,7 @@
 
 
 <div class="viewcode-block" id="Condition"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Condition">[docs]</a><span class="k">class</span> <span class="nc">Condition</span><span class="p">(</span><span class="n">Operand</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Condition, i.e. comparison operand for a CondJump.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Condition, i.e. comparison operand for a CondJump.</span>
 
 <span class="sd">    Example usage :</span>
 
@@ -144,7 +144,7 @@
             <span class="k">raise</span> <span class="n">MiniCInternalError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported comparison operator </span><span class="si">{</span><span class="n">optype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Condition.negate"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Condition.negate">[docs]</a>    <span class="k">def</span> <span class="nf">negate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Condition&#39;</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the opposite condition.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the opposite condition.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Condition</span><span class="p">(</span><span class="n">opnot_dict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_op</span><span class="p">])</span></div>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -152,7 +152,7 @@
 
 
 <div class="viewcode-block" id="Function"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Function">[docs]</a><span class="k">class</span> <span class="nc">Function</span><span class="p">(</span><span class="n">Operand</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Operand for build-in function call.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Operand for build-in function call.&quot;&quot;&quot;</span>
 
     <span class="n">_name</span><span class="p">:</span> <span class="nb">str</span>
 
@@ -164,7 +164,7 @@
 
 
 <div class="viewcode-block" id="DataLocation"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.DataLocation">[docs]</a><span class="k">class</span> <span class="nc">DataLocation</span><span class="p">(</span><span class="n">Operand</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; A Data Location is either a register, a temporary</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; A Data Location is either a register, a temporary</span>
 <span class="sd">    or a place in memory (offset).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -181,7 +181,7 @@
 
 
 <div class="viewcode-block" id="Register"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Register">[docs]</a><span class="k">class</span> <span class="nc">Register</span><span class="p">(</span><span class="n">DataLocation</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; A (physical) register.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; A (physical) register.&quot;&quot;&quot;</span>
 
     <span class="n">_number</span><span class="p">:</span> <span class="nb">int</span>
 
@@ -234,7 +234,7 @@
 
 
 <div class="viewcode-block" id="Offset"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Offset">[docs]</a><span class="k">class</span> <span class="nc">Offset</span><span class="p">(</span><span class="n">DataLocation</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Offset = address in memory computed with base + offset.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Offset = address in memory computed with base + offset.&quot;&quot;&quot;</span>
 
     <span class="n">_basereg</span><span class="p">:</span> <span class="n">Register</span>
     <span class="n">_offset</span><span class="p">:</span> <span class="nb">int</span>
@@ -247,12 +247,12 @@
         <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">(</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_basereg</span><span class="p">))</span>
 
 <div class="viewcode-block" id="Offset.get_offset"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Offset.get_offset">[docs]</a>    <span class="k">def</span> <span class="nf">get_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the value of the offset.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the value of the offset.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span></div></div>
 
 
 <div class="viewcode-block" id="Immediate"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Immediate">[docs]</a><span class="k">class</span> <span class="nc">Immediate</span><span class="p">(</span><span class="n">DataLocation</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Immediate operand (integer).&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Immediate operand (integer).&quot;&quot;&quot;</span>
 
     <span class="n">_val</span><span class="p">:</span> <span class="nb">int</span>
 
@@ -264,7 +264,7 @@
 
 
 <div class="viewcode-block" id="Temporary"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Temporary">[docs]</a><span class="k">class</span> <span class="nc">Temporary</span><span class="p">(</span><span class="n">DataLocation</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Temporary, a location that has not been allocated yet.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Temporary, a location that has not been allocated yet.</span>
 <span class="sd">    It will later be mapped to a physical register (Register) or to a memory location (Offset).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -279,12 +279,12 @@
         <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;temp_</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number</span><span class="p">)))</span>
 
 <div class="viewcode-block" id="Temporary.get_alloced_loc"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Temporary.get_alloced_loc">[docs]</a>    <span class="k">def</span> <span class="nf">get_alloced_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataLocation</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return the DataLocation allocated to this Temporary.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the DataLocation allocated to this Temporary.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pool</span><span class="o">.</span><span class="n">get_alloced_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="TemporaryPool"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.TemporaryPool">[docs]</a><span class="k">class</span> <span class="nc">TemporaryPool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Manage a pool of temporaries.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Manage a pool of temporaries.&quot;&quot;&quot;</span>
 
     <span class="n">_all_temps</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Temporary</span><span class="p">]</span>
     <span class="n">_current_num</span><span class="p">:</span> <span class="nb">int</span>
@@ -296,20 +296,20 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_allocation</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
 <div class="viewcode-block" id="TemporaryPool.get_all_temps"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.TemporaryPool.get_all_temps">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_temps</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Temporary</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return all the temporaries of the pool.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all the temporaries of the pool.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_temps</span></div>
 
 <div class="viewcode-block" id="TemporaryPool.get_alloced_loc"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.TemporaryPool.get_alloced_loc">[docs]</a>    <span class="k">def</span> <span class="nf">get_alloced_loc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">Temporary</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataLocation</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Get the actual DataLocation allocated for the temporary t.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the actual DataLocation allocated for the temporary t.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allocation</span><span class="p">[</span><span class="n">t</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="TemporaryPool.add_tmp"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.TemporaryPool.add_tmp">[docs]</a>    <span class="k">def</span> <span class="nf">add_tmp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">Temporary</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Add a temporary to the pool.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a temporary to the pool.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_all_temps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_allocation</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>  <span class="c1"># While no allocation, return the temporary itself</span></div>
 
 <div class="viewcode-block" id="TemporaryPool.set_temp_allocation"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.TemporaryPool.set_temp_allocation">[docs]</a>    <span class="k">def</span> <span class="nf">set_temp_allocation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allocation</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Temporary</span><span class="p">,</span> <span class="n">DataLocation</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Give a mapping from temporaries to actual registers.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Give a mapping from temporaries to actual registers.</span>
 <span class="sd">        The argument allocation must be a dict from Temporary to</span>
 <span class="sd">        DataLocation other than Temporary (typically Register or Offset).</span>
 <span class="sd">        Typing enforces that keys are Temporary and values are Datalocation.</span>
@@ -322,7 +322,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_allocation</span> <span class="o">=</span> <span class="n">allocation</span></div>
 
 <div class="viewcode-block" id="TemporaryPool.fresh_tmp"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.TemporaryPool.fresh_tmp">[docs]</a>    <span class="k">def</span> <span class="nf">fresh_tmp</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Temporary</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Give a new fresh Temporary and add it to the pool.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Give a new fresh Temporary and add it to the pool.&quot;&quot;&quot;</span>
         <span class="n">t</span> <span class="o">=</span> <span class="n">Temporary</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_current_num</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_current_num</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_tmp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
@@ -330,7 +330,7 @@
 
 
 <div class="viewcode-block" id="Renamer"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Renamer">[docs]</a><span class="k">class</span> <span class="nc">Renamer</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Manage a renaming of temporaries.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Manage a renaming of temporaries.&quot;&quot;&quot;</span>
 
     <span class="n">_pool</span><span class="p">:</span> <span class="n">TemporaryPool</span>
     <span class="n">_env</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Temporary</span><span class="p">,</span> <span class="n">Temporary</span><span class="p">]</span>
@@ -340,21 +340,21 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_env</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
 <div class="viewcode-block" id="Renamer.fresh"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Renamer.fresh">[docs]</a>    <span class="k">def</span> <span class="nf">fresh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">Temporary</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Temporary</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Give a fresh rename for a Temporary.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Give a fresh rename for a Temporary.&quot;&quot;&quot;</span>
         <span class="n">new_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pool</span><span class="o">.</span><span class="n">fresh_tmp</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_env</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_t</span>
         <span class="k">return</span> <span class="n">new_t</span></div>
 
 <div class="viewcode-block" id="Renamer.replace"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Renamer.replace">[docs]</a>    <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">Temporary</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Temporary</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Give the rename for a Temporary (which is itself if it is not renamed).&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Give the rename for a Temporary (which is itself if it is not renamed).&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_env</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Renamer.defined"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Renamer.defined">[docs]</a>    <span class="k">def</span> <span class="nf">defined</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">Temporary</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;True if the Temporary is renamed.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;True if the Temporary is renamed.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_env</span></div>
 
 <div class="viewcode-block" id="Renamer.copy"><a class="viewcode-back" href="../../api/Lib.Operands.html#Lib.Operands.Renamer.copy">[docs]</a>    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Give a copy of the Renamer.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Give a copy of the Renamer.&quot;&quot;&quot;</span>
         <span class="n">r</span> <span class="o">=</span> <span class="n">Renamer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_pool</span><span class="p">)</span>
         <span class="n">r</span><span class="o">.</span><span class="n">_env</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_env</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">r</span></div></div>

@@ -95,7 +95,7 @@
 
 <div class="viewcode-block" id="PhiNode"><a class="viewcode-back" href="../../api/Lib.PhiNode.html#Lib.PhiNode.PhiNode">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">PhiNode</span><span class="p">(</span><span class="n">Statement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A φ node is a renaming in the CFG, of the form temp_x = φ(temp_0, ..., temp_n).</span>
 <span class="sd">    The field var contains the variable temp_x.</span>
 <span class="sd">    The field srcs links each corresponding predecessor in the CFG</span>
@@ -106,26 +106,26 @@
     <span class="n">srcs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Label</span><span class="p">,</span> <span class="n">Operand</span><span class="p">]</span>
 
 <div class="viewcode-block" id="PhiNode.defined"><a class="viewcode-back" href="../../api/Lib.PhiNode.html#Lib.PhiNode.PhiNode.defined">[docs]</a>    <span class="k">def</span> <span class="nf">defined</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Operand</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the variable defined by the φ node.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the variable defined by the φ node.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="PhiNode.get_srcs"><a class="viewcode-back" href="../../api/Lib.PhiNode.html#Lib.PhiNode.PhiNode.get_srcs">[docs]</a>    <span class="k">def</span> <span class="nf">get_srcs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Label</span><span class="p">,</span> <span class="n">Operand</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Return the dictionnary associating for each previous block the corresponding variable.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">srcs</span></div>
 
 <div class="viewcode-block" id="PhiNode.used"><a class="viewcode-back" href="../../api/Lib.PhiNode.html#Lib.PhiNode.PhiNode.used">[docs]</a>    <span class="k">def</span> <span class="nf">used</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Operand</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the variables used by the statement.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the variables used by the statement.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">srcs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
 
 <div class="viewcode-block" id="PhiNode.rename"><a class="viewcode-back" href="../../api/Lib.PhiNode.html#Lib.PhiNode.PhiNode.rename">[docs]</a>    <span class="k">def</span> <span class="nf">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renamer</span><span class="p">:</span> <span class="n">Renamer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Rename the variable defined by the φ node with a fresh name.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Rename the variable defined by the φ node with a fresh name.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">,</span> <span class="n">Temporary</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">=</span> <span class="n">renamer</span><span class="o">.</span><span class="n">fresh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="PhiNode.rename_from"><a class="viewcode-back" href="../../api/Lib.PhiNode.html#Lib.PhiNode.PhiNode.rename_from">[docs]</a>    <span class="k">def</span> <span class="nf">rename_from</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renamer</span><span class="p">:</span> <span class="n">Renamer</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="n">Label</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Rename the variable associated to the block identified by `label`.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Rename the variable associated to the block identified by `label`.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">srcs</span><span class="p">:</span>
             <span class="n">t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">srcs</span><span class="p">[</span><span class="n">label</span><span class="p">]</span>
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Temporary</span><span class="p">):</span>

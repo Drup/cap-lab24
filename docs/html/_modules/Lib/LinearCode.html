@@ -97,7 +97,7 @@
 
 
 <div class="viewcode-block" id="LinearCode"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode">[docs]</a><span class="k">class</span> <span class="nc">LinearCode</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Representation of a RiscV program as a list of instructions.</span>
 
 <span class="sd">    :py:meth:`add_instruction` is repeatedly called in the codegen visitor</span>
@@ -111,7 +111,7 @@
 <span class="sd">    the RiscV program to a file.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The :py:attr:`fdata` member variable contains some meta-information</span>
 <span class="sd">    on the program, for instance to allocate a new temporary.</span>
 <span class="sd">    See :py:class:`Lib.FunctionData.FunctionData`.</span>
@@ -125,7 +125,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">fdata</span> <span class="o">=</span> <span class="n">FunctionData</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
 <div class="viewcode-block" id="LinearCode.add_instruction"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode.add_instruction">[docs]</a>    <span class="k">def</span> <span class="nf">add_instruction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="n">CodeStatement</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Utility function to add an instruction in the program.</span>
 
 <span class="sd">        See also :py:mod:`Lib.RiscV` to generate relevant instructions.</span>
@@ -133,7 +133,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_listIns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="LinearCode.iter_statements"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode.iter_statements">[docs]</a>    <span class="k">def</span> <span class="nf">iter_statements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Iterate over instructions.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Iterate over instructions.</span>
 <span class="sd">        For each real instruction i (not label or comment), replace it</span>
 <span class="sd">        with the list of instructions given by f(i).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -144,20 +144,20 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_listIns</span> <span class="o">=</span> <span class="n">new_list_ins</span></div>
 
 <div class="viewcode-block" id="LinearCode.get_instructions"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode.get_instructions">[docs]</a>    <span class="k">def</span> <span class="nf">get_instructions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">CodeStatement</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the list of instructions of the program.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the list of instructions of the program.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_listIns</span></div>
 
     <span class="c1"># each instruction has its own &quot;add in list&quot; version</span>
 <div class="viewcode-block" id="LinearCode.add_label"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode.add_label">[docs]</a>    <span class="k">def</span> <span class="nf">add_label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="n">Label</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add a label in the program.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a label in the program.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_instruction</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="LinearCode.add_comment"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode.add_comment">[docs]</a>    <span class="k">def</span> <span class="nf">add_comment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add a comment in the program.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a comment in the program.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_instruction</span><span class="p">(</span><span class="n">Comment</span><span class="p">(</span><span class="n">s</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="LinearCode.add_instruction_PRINTLN_INT"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode.add_instruction_PRINTLN_INT">[docs]</a>    <span class="k">def</span> <span class="nf">add_instruction_PRINTLN_INT</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reg</span><span class="p">:</span> <span class="n">DataLocation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Print integer value, with newline. (see Expand)&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Print integer value, with newline. (see Expand)&quot;&quot;&quot;</span>
         <span class="c1"># A print instruction generates the temp it prints.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_instruction</span><span class="p">(</span><span class="n">mv</span><span class="p">(</span><span class="n">A0</span><span class="p">,</span> <span class="n">reg</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_instruction</span><span class="p">(</span><span class="n">call</span><span class="p">(</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;println_int&#39;</span><span class="p">)))</span></div>
@@ -166,12 +166,12 @@
         <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_listIns</span><span class="p">))</span>
 
 <div class="viewcode-block" id="LinearCode.print_code"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode.print_code">[docs]</a>    <span class="k">def</span> <span class="nf">print_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Outputs the RiscV program as text to a file at the given path.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Outputs the RiscV program as text to a file at the given path.&quot;&quot;&quot;</span>
         <span class="n">_print_code</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_listIns</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fdata</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">init_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                     <span class="n">fin_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fin_div0</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="n">comment</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="LinearCode.print_dot"><a class="viewcode-back" href="../../api/Lib.LinearCode.html#Lib.LinearCode.LinearCode.print_dot">[docs]</a>    <span class="k">def</span> <span class="nf">print_dot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">DF</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
-        <span class="sd">&quot;&quot;&quot;Outputs the RiscV program as graph to a file at the given path.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Outputs the RiscV program as graph to a file at the given path.&quot;&quot;&quot;</span>
         <span class="c1"># import graphviz here so that students who don&#39;t have it can still work on lab4</span>
         <span class="kn">from</span> <span class="nn">graphviz</span> <span class="kn">import</span> <span class="n">Digraph</span>
         <span class="n">graph</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">()</span>

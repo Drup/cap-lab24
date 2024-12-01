@@ -90,17 +90,17 @@
 
 
 <div class="viewcode-block" id="call"><a class="viewcode-back" href="../../api/Lib.RiscV.html#Lib.RiscV.call">[docs]</a><span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">Function</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Instru3A</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Function call.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Function call.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">Instru3A</span><span class="p">(</span><span class="s1">&#39;call&#39;</span><span class="p">,</span> <span class="n">function</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="jump"><a class="viewcode-back" href="../../api/Lib.RiscV.html#Lib.RiscV.jump">[docs]</a><span class="k">def</span> <span class="nf">jump</span><span class="p">(</span><span class="n">label</span><span class="p">:</span> <span class="n">Label</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AbsoluteJump</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Unconditional jump to label.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Unconditional jump to label.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">AbsoluteJump</span><span class="p">(</span><span class="n">label</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="conditional_jump"><a class="viewcode-back" href="../../api/Lib.RiscV.html#Lib.RiscV.conditional_jump">[docs]</a><span class="k">def</span> <span class="nf">conditional_jump</span><span class="p">(</span><span class="n">label</span><span class="p">:</span> <span class="n">Label</span><span class="p">,</span> <span class="n">op1</span><span class="p">:</span> <span class="n">Operand</span><span class="p">,</span> <span class="n">cond</span><span class="p">:</span> <span class="n">Condition</span><span class="p">,</span> <span class="n">op2</span><span class="p">:</span> <span class="n">Operand</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Add a conditional jump to the code.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a conditional jump to the code.</span>
 <span class="sd">    This is a wrapper around bge, bgt, beq, ... c is a Condition, like</span>
 <span class="sd">    Condition(&#39;bgt&#39;), Condition(MiniCParser.EQ), ...</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -141,12 +141,12 @@
 
 
 <div class="viewcode-block" id="land"><a class="viewcode-back" href="../../api/Lib.RiscV.html#Lib.RiscV.land">[docs]</a><span class="k">def</span> <span class="nf">land</span><span class="p">(</span><span class="n">dr</span><span class="p">:</span> <span class="n">Operand</span><span class="p">,</span> <span class="n">sr1</span><span class="p">:</span> <span class="n">Operand</span><span class="p">,</span> <span class="n">sr2orimm7</span><span class="p">:</span> <span class="n">Operand</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Instru3A</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;And instruction (cannot be called `and` due to Python and).&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;And instruction (cannot be called `and` due to Python and).&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">Instru3A</span><span class="p">(</span><span class="s2">&quot;and&quot;</span><span class="p">,</span> <span class="n">dr</span><span class="p">,</span> <span class="n">sr1</span><span class="p">,</span> <span class="n">sr2orimm7</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="lor"><a class="viewcode-back" href="../../api/Lib.RiscV.html#Lib.RiscV.lor">[docs]</a><span class="k">def</span> <span class="nf">lor</span><span class="p">(</span><span class="n">dr</span><span class="p">:</span> <span class="n">Operand</span><span class="p">,</span> <span class="n">sr1</span><span class="p">:</span> <span class="n">Operand</span><span class="p">,</span> <span class="n">sr2orimm7</span><span class="p">:</span> <span class="n">Operand</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Instru3A</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Or instruction (cannot be called `or` due to Python or).&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Or instruction (cannot be called `or` due to Python or).&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">Instru3A</span><span class="p">(</span><span class="s2">&quot;or&quot;</span><span class="p">,</span> <span class="n">dr</span><span class="p">,</span> <span class="n">sr1</span><span class="p">,</span> <span class="n">sr2orimm7</span><span class="p">)</span></div>
 
 

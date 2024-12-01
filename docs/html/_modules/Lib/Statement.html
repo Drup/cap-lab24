@@ -95,7 +95,7 @@
 
 
 <div class="viewcode-block" id="regset_to_string"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.regset_to_string">[docs]</a><span class="k">def</span> <span class="nf">regset_to_string</span><span class="p">(</span><span class="n">registerset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Utility function: pretty-prints a set of locations.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Utility function: pretty-prints a set of locations.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="s2">&quot;{&quot;</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">registerset</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;}&quot;</span></div>
 
 
@@ -105,32 +105,32 @@
 
 <div class="viewcode-block" id="Statement"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Statement">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">unsafe_hash</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">Statement</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;A Statement, which is an instruction, a comment or a label.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A Statement, which is an instruction, a comment or a label.&quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="Statement.defined"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Statement.defined">[docs]</a>    <span class="k">def</span> <span class="nf">defined</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Operand</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Operands defined (written) in this instruction&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Operands defined (written) in this instruction&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[]</span></div>
 
 <div class="viewcode-block" id="Statement.used"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Statement.used">[docs]</a>    <span class="k">def</span> <span class="nf">used</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Operand</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Operands used (read) in this instruction&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Operands used (read) in this instruction&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[]</span></div>
 
 <div class="viewcode-block" id="Statement.substitute"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Statement.substitute">[docs]</a>    <span class="k">def</span> <span class="nf">substitute</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">TStatement</span><span class="p">,</span> <span class="n">subst</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Operand</span><span class="p">,</span> <span class="n">Operand</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">TStatement</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return a new instruction, cloned from this one, replacing operands</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a new instruction, cloned from this one, replacing operands</span>
 <span class="sd">        that appear as key in subst by their value.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
             <span class="s2">&quot;substitute: Operands </span><span class="si">{}</span><span class="s2"> are not present in instruction </span><span class="si">{}</span><span class="s2">&quot;</span>
             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">subst</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="Statement.with_args"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Statement.with_args">[docs]</a>    <span class="k">def</span> <span class="nf">with_args</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">TStatement</span><span class="p">,</span> <span class="n">new_args</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Operand</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">TStatement</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return a new instruction, cloned from this one, where operands have</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a new instruction, cloned from this one, where operands have</span>
 <span class="sd">        been replaced by new_args.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
                 <span class="s2">&quot;substitute: Operands </span><span class="si">{}</span><span class="s2"> are not present in instruction </span><span class="si">{}</span><span class="s2">&quot;</span>
                 <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">new_args</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="Statement.printIns"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Statement.printIns">[docs]</a>    <span class="k">def</span> <span class="nf">printIns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Print the statement on the given output.</span>
 <span class="sd">        Should never be called on the base class.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -139,7 +139,7 @@
 
 <div class="viewcode-block" id="Comment"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Comment">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">unsafe_hash</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">Comment</span><span class="p">(</span><span class="n">Statement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A comment.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A comment.&quot;&quot;&quot;</span>
     <span class="n">comment</span><span class="p">:</span> <span class="nb">str</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># use only for print_dot !</span>
@@ -151,7 +151,7 @@
 
 <div class="viewcode-block" id="Label"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Label">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">unsafe_hash</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">Label</span><span class="p">(</span><span class="n">Statement</span><span class="p">,</span> <span class="n">Operand</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A label is both a Statement and an Operand.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A label is both a Statement and an Operand.&quot;&quot;&quot;</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -170,7 +170,7 @@
     <span class="n">_read_only</span><span class="p">:</span> <span class="nb">bool</span>
 
 <div class="viewcode-block" id="Instruction.is_read_only"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Instruction.is_read_only">[docs]</a>    <span class="k">def</span> <span class="nf">is_read_only</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        True if the instruction only reads from its operands.</span>
 
 <span class="sd">        Otherwise, the first operand is considered as the destination</span>
@@ -182,7 +182,7 @@
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
 <div class="viewcode-block" id="Instruction.args"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Instruction.args">[docs]</a>    <span class="k">def</span> <span class="nf">args</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Operand</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;List of operands the instruction takes&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;List of operands the instruction takes&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
 <div class="viewcode-block" id="Instruction.defined"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Instruction.defined">[docs]</a>    <span class="k">def</span> <span class="nf">defined</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -214,7 +214,7 @@
         <span class="k">return</span> <span class="nb">hash</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">ins</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">()))</span>
 
 <div class="viewcode-block" id="Instruction.printIns"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.Instruction.printIns">[docs]</a>    <span class="k">def</span> <span class="nf">printIns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Print the instruction on the given output.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Print the instruction on the given output.&quot;&quot;&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;       &#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="n">file</span><span class="o">=</span><span class="n">stream</span><span class="p">)</span></div></div>
 
 
@@ -273,7 +273,7 @@
 
 <div class="viewcode-block" id="AbsoluteJump"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.AbsoluteJump">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">AbsoluteJump</span><span class="p">(</span><span class="n">Instruction</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; An Absolute Jump is a specific kind of instruction&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; An Absolute Jump is a specific kind of instruction&quot;&quot;&quot;</span>
     <span class="n">ins</span> <span class="o">=</span> <span class="s2">&quot;j&quot;</span>
     <span class="n">label</span><span class="p">:</span> <span class="n">Label</span>
     <span class="n">_read_only</span> <span class="o">=</span> <span class="kc">True</span>
@@ -305,13 +305,13 @@
         <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="nb">super</span><span class="p">)</span>
 
 <div class="viewcode-block" id="AbsoluteJump.targets"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.AbsoluteJump.targets">[docs]</a>    <span class="k">def</span> <span class="nf">targets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Label</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the labels targetted by the AbsoluteJump.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the labels targetted by the AbsoluteJump.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">]</span></div></div>
 
 
 <div class="viewcode-block" id="ConditionalJump"><a class="viewcode-back" href="../../api/Lib.Statement.html#Lib.Statement.ConditionalJump">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">ConditionalJump</span><span class="p">(</span><span class="n">Instruction</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; A Conditional Jump is a specific kind of instruction&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; A Conditional Jump is a specific kind of instruction&quot;&quot;&quot;</span>
     <span class="n">cond</span><span class="p">:</span> <span class="n">Condition</span>
     <span class="n">label</span><span class="p">:</span> <span class="n">Label</span>
     <span class="n">op1</span><span class="p">:</span> <span class="n">Operand</span>

@@ -108,7 +108,7 @@
 
 <div class="viewcode-block" id="Return"><a class="viewcode-back" href="../../api/Lib.Terminator.html#Lib.Terminator.Return">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">unsafe_hash</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">Return</span><span class="p">(</span><span class="n">Statement</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A terminator that marks the end of the function.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A terminator that marks the end of the function.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">(</span><span class="s2">&quot;return&quot;</span><span class="p">)</span>
@@ -117,7 +117,7 @@
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;return&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">stream</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Return.targets"><a class="viewcode-back" href="../../api/Lib.Terminator.html#Lib.Terminator.Return.targets">[docs]</a>    <span class="k">def</span> <span class="nf">targets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Label</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the labels targetted by the Return terminator.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the labels targetted by the Return terminator.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[]</span></div>
 
 <div class="viewcode-block" id="Return.args"><a class="viewcode-back" href="../../api/Lib.Terminator.html#Lib.Terminator.Return.args">[docs]</a>    <span class="k">def</span> <span class="nf">args</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Operand</span><span class="p">]:</span>
@@ -146,7 +146,7 @@
 
 <div class="viewcode-block" id="BranchingTerminator"><a class="viewcode-back" href="../../api/Lib.Terminator.html#Lib.Terminator.BranchingTerminator">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">BranchingTerminator</span><span class="p">(</span><span class="n">Instruction</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;A terminating statement with a condition.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A terminating statement with a condition.&quot;&quot;&quot;</span>
 
     <span class="c1">#: The condition of the branch</span>
     <span class="n">cond</span><span class="p">:</span> <span class="n">Condition</span>
@@ -173,7 +173,7 @@
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">op1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">op2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_then</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_else</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="BranchingTerminator.targets"><a class="viewcode-back" href="../../api/Lib.Terminator.html#Lib.Terminator.BranchingTerminator.targets">[docs]</a>    <span class="k">def</span> <span class="nf">targets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Label</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the labels targetted by the Branching terminator.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the labels targetted by the Branching terminator.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_then</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_else</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="BranchingTerminator.rename"><a class="viewcode-back" href="../../api/Lib.Terminator.html#Lib.Terminator.BranchingTerminator.rename">[docs]</a>    <span class="k">def</span> <span class="nf">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">renamer</span><span class="p">:</span> <span class="n">Renamer</span><span class="p">):</span>
@@ -213,7 +213,7 @@
 
 <div class="viewcode-block" id="jump2terminator"><a class="viewcode-back" href="../../api/Lib.Terminator.html#Lib.Terminator.jump2terminator">[docs]</a><span class="k">def</span> <span class="nf">jump2terminator</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">ConditionalJump</span> <span class="o">|</span> <span class="n">AbsoluteJump</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
                     <span class="n">next_label</span><span class="p">:</span> <span class="n">Label</span> <span class="o">|</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Terminator</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Construct the Terminator associated to the potential jump j</span>
 <span class="sd">    to the potential label next_label.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -227,7 +227,7 @@
             <span class="k">return</span> <span class="n">BranchingTerminator</span><span class="p">(</span><span class="n">j</span><span class="o">.</span><span class="n">cond</span><span class="p">,</span> <span class="n">j</span><span class="o">.</span><span class="n">op1</span><span class="p">,</span> <span class="n">j</span><span class="o">.</span><span class="n">op2</span><span class="p">,</span> <span class="n">j</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="n">label_else</span><span class="p">)</span>
         <span class="k">case</span> <span class="n">AbsoluteJump</span><span class="p">():</span>
             <span class="k">return</span> <span class="n">AbsoluteJump</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">j</span><span class="o">.</span><span class="n">label</span><span class="p">)</span>
-        <span class="k">case</span> <span class="k">_</span><span class="p">:</span>
+        <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">next_label</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">AbsoluteJump</span><span class="p">(</span><span class="n">next_label</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>

@@ -87,7 +87,7 @@
 
 
 <div class="viewcode-block" id="GraphError"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GraphError">[docs]</a><span class="k">class</span> <span class="nc">GraphError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Exception raised for self loops.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Exception raised for self loops.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
@@ -97,7 +97,7 @@
 
 
 <div class="viewcode-block" id="GeneralGraph"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GeneralGraph">[docs]</a><span class="k">class</span> <span class="nc">GeneralGraph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    General class regrouping similarities</span>
 <span class="sd">    between directed and non oriented graphs.</span>
 <span class="sd">    The only differences between the two are:</span>
@@ -113,7 +113,7 @@
     <span class="n">graph_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Set</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initializes a graph object.</span>
 <span class="sd">        If no dictionary or None is given,</span>
 <span class="sd">        an empty dictionary will be used.</span>
@@ -123,11 +123,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span> <span class="o">=</span> <span class="n">graph_dict</span>
 
 <div class="viewcode-block" id="GeneralGraph.vertices"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GeneralGraph.vertices">[docs]</a>    <span class="k">def</span> <span class="nf">vertices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the vertices of a graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the vertices of a graph.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span></div>
 
 <div class="viewcode-block" id="GeneralGraph.add_vertex"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GeneralGraph.add_vertex">[docs]</a>    <span class="k">def</span> <span class="nf">add_vertex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertex</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        If the vertex &quot;vertex&quot; is not in</span>
 <span class="sd">        self.graph_dict, a key &quot;vertex&quot; with an empty</span>
 <span class="sd">        list as a value is added to the dictionary.</span>
@@ -137,7 +137,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="GeneralGraph.edges"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GeneralGraph.edges">[docs]</a>    <span class="k">def</span> <span class="nf">edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Set</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Return the edges of the graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the edges of the graph.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[]</span></div>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -150,7 +150,7 @@
         <span class="k">return</span> <span class="n">res</span>
 
 <div class="viewcode-block" id="GeneralGraph.dfs_traversal"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GeneralGraph.dfs_traversal">[docs]</a>    <span class="k">def</span> <span class="nf">dfs_traversal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Compute a depth first search of the graph,</span>
 <span class="sd">        from the vertex root.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -165,11 +165,11 @@
         <span class="k">return</span> <span class="n">seen</span></div>
 
 <div class="viewcode-block" id="GeneralGraph.is_reachable_from"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GeneralGraph.is_reachable_from">[docs]</a>    <span class="k">def</span> <span class="nf">is_reachable_from</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v1</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;True if there is a path from v1 to v2.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;True if there is a path from v1 to v2.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">v2</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dfs_traversal</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="GeneralGraph.connected_components"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GeneralGraph.connected_components">[docs]</a>    <span class="k">def</span> <span class="nf">connected_components</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Compute the list of all connected components of the graph,</span>
 <span class="sd">        each component being a list of vetices.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -183,7 +183,7 @@
         <span class="k">return</span> <span class="n">components</span></div>
 
 <div class="viewcode-block" id="GeneralGraph.bfs_traversal"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.GeneralGraph.bfs_traversal">[docs]</a>    <span class="k">def</span> <span class="nf">bfs_traversal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Compute a breadth first search of the graph,</span>
 <span class="sd">        from the vertex root.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -199,10 +199,10 @@
 
 
 <div class="viewcode-block" id="Graph"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.Graph">[docs]</a><span class="k">class</span> <span class="nc">Graph</span><span class="p">(</span><span class="n">GeneralGraph</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Class for non oriented graphs.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class for non oriented graphs.&quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="Graph.edges"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.Graph.edges">[docs]</a>    <span class="k">def</span> <span class="nf">edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Set</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        A static method generating the set of edges</span>
 <span class="sd">        (they appear twice in the dictionnary).</span>
 <span class="sd">        Return a list of sets.</span>
@@ -215,7 +215,7 @@
         <span class="k">return</span> <span class="n">edges</span></div>
 
 <div class="viewcode-block" id="Graph.add_edge"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.Graph.add_edge">[docs]</a>    <span class="k">def</span> <span class="nf">add_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add an edge in the graph.</span>
 <span class="sd">        edge should be a pair and not (c,c)</span>
 <span class="sd">        (we call g.add_edge((v1,v2)))</span>
@@ -234,7 +234,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">[</span><span class="n">vertex2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">vertex1</span><span class="p">}</span></div>
 
 <div class="viewcode-block" id="Graph.print_dot"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.Graph.print_dot">[docs]</a>    <span class="k">def</span> <span class="nf">print_dot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">{})</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Print the graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Print the graph.&quot;&quot;&quot;</span>
         <span class="n">color_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="s1">&#39;magenta&#39;</span><span class="p">]</span> <span class="o">+</span> \
             <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;grey</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">)]</span>
         <span class="n">color_shapes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ellipse&#39;</span><span class="p">,</span> <span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="s1">&#39;diamond&#39;</span><span class="p">,</span> <span class="s1">&#39;trapezium&#39;</span><span class="p">,</span> <span class="s1">&#39;egg&#39;</span><span class="p">,</span>
@@ -261,20 +261,20 @@
         <span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># print in pdf</span></div>
 
 <div class="viewcode-block" id="Graph.delete_vertex"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.Graph.delete_vertex">[docs]</a>    <span class="k">def</span> <span class="nf">delete_vertex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertex</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Delete a vertex and all the adjacent edges.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete a vertex and all the adjacent edges.&quot;&quot;&quot;</span>
         <span class="n">gdict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span>
         <span class="k">for</span> <span class="n">neighbour</span> <span class="ow">in</span> <span class="n">gdict</span><span class="p">[</span><span class="n">vertex</span><span class="p">]:</span>
             <span class="n">gdict</span><span class="p">[</span><span class="n">neighbour</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">vertex</span><span class="p">)</span>
         <span class="k">del</span> <span class="n">gdict</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="Graph.delete_edge"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.Graph.delete_edge">[docs]</a>    <span class="k">def</span> <span class="nf">delete_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
-        <span class="sd">&quot;&quot;&quot;Delete an edge.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete an edge.&quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span> <span class="o">=</span> <span class="n">edge</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">[</span><span class="n">v1</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">[</span><span class="n">v2</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Graph.color"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.Graph.color">[docs]</a>    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Color the graph with an unlimited number of colors.</span>
 <span class="sd">        Return a dict vertex -&gt; color, where color is an integer (0, 1, ...).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -283,7 +283,7 @@
 
     <span class="c1"># see algo of the course</span>
 <div class="viewcode-block" id="Graph.color_with_k_colors"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.Graph.color_with_k_colors">[docs]</a>    <span class="k">def</span> <span class="nf">color_with_k_colors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">avoidingnodes</span><span class="o">=</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">List</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Color with &lt;= K colors (if K is unspecified, use unlimited colors).</span>
 
 <span class="sd">        Return 3 values:</span>
@@ -336,18 +336,18 @@
 
 
 <div class="viewcode-block" id="DiGraph"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.DiGraph">[docs]</a><span class="k">class</span> <span class="nc">DiGraph</span><span class="p">(</span><span class="n">GeneralGraph</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Class for directed graphs.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class for directed graphs.&quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="DiGraph.pred"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.DiGraph.pred">[docs]</a>    <span class="k">def</span> <span class="nf">pred</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Return all predecessors of the vertex `v` in the graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all predecessors of the vertex `v` in the graph.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">{</span><span class="n">src</span> <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">dests</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dests</span><span class="p">}</span></div>
 
 <div class="viewcode-block" id="DiGraph.neighbourhoods"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.DiGraph.neighbourhoods">[docs]</a>    <span class="k">def</span> <span class="nf">neighbourhoods</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Set</span><span class="p">]]:</span>
-        <span class="sd">&quot;&quot;&quot;Return all neighbourhoods in the graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return all neighbourhoods in the graph.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())</span></div>
 
 <div class="viewcode-block" id="DiGraph.edges"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.DiGraph.edges">[docs]</a>    <span class="k">def</span> <span class="nf">edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Set</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot; A static method generating the set of edges&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; A static method generating the set of edges&quot;&quot;&quot;</span>
         <span class="n">edges</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">neighbour</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">[</span><span class="n">vertex</span><span class="p">]:</span>
@@ -355,7 +355,7 @@
         <span class="k">return</span> <span class="n">edges</span></div>
 
 <div class="viewcode-block" id="DiGraph.add_edge"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.DiGraph.add_edge">[docs]</a>    <span class="k">def</span> <span class="nf">add_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Add an edge in the graph.</span>
 <span class="sd">        edge should be a pair and not (c,c)</span>
 <span class="sd">        (we call g.add_edge((v1,v2)))</span>
@@ -369,7 +369,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">[</span><span class="n">vertex2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="DiGraph.print_dot"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.DiGraph.print_dot">[docs]</a>    <span class="k">def</span> <span class="nf">print_dot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Print the graph.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Print the graph.&quot;&quot;&quot;</span>
         <span class="n">dot</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">(</span><span class="n">comment</span><span class="o">=</span><span class="s1">&#39;Conflict Graph&#39;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">:</span>
             <span class="n">shape</span> <span class="o">=</span> <span class="kc">None</span>
@@ -381,14 +381,14 @@
         <span class="n">dot</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># print in pdf</span></div>
 
 <div class="viewcode-block" id="DiGraph.delete_vertex"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.DiGraph.delete_vertex">[docs]</a>    <span class="k">def</span> <span class="nf">delete_vertex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vertex</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Delete a vertex and all the adjacent edges.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete a vertex and all the adjacent edges.&quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">neighbours</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="n">vertex</span> <span class="ow">in</span> <span class="n">neighbours</span><span class="p">:</span>
                 <span class="n">neighbours</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">vertex</span><span class="p">)</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">[</span><span class="n">vertex</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="DiGraph.delete_edge"><a class="viewcode-back" href="../../api/Lib.Graphes.html#Lib.Graphes.DiGraph.delete_edge">[docs]</a>    <span class="k">def</span> <span class="nf">delete_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Delete an edge.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete an edge.&quot;&quot;&quot;</span>
         <span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span> <span class="o">=</span> <span class="n">edge</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">graph_dict</span><span class="p">[</span><span class="n">v1</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span></div></div>
 </pre></div>
