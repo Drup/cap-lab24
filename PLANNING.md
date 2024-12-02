@@ -112,4 +112,5 @@ _Academic first semester 2024-2025_
 - :hammer: Choice Lab (1/3): Monday 02/12/2024, 8h00-13h30. Room E001 (Samuel Humeau & Emma Nardino)
 
     * Optimisations under SSA form [TP5c](TP05/tp5c.pdf), code in [MiniC/TPoptim/](MiniC/TPoptim/).
-    * Other possibilities next week.
+    * Parsing and typechecking functions [TP06a](TP06/tp6a.pdf), code in [MiniC/](MiniC/).
+    * Code generation for functions [TP06b](TP06/tp6b.pdf), code in [MiniC/](MiniC/).  
