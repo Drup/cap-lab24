@@ -103,9 +103,17 @@ _Academic first semester 2024-2025_
 
 - :hammer: Lab 5b (2/2): Monday 18/11/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
 
+- :book: Course: Thursday 21/11/2024, 10h15-12h15. Amphi J (Yannick Zakowski)
+
+  * Functions: code generation [slides in english](course/cap_cours08_func_codegen.pdf).
+
 # Week 10:
 
 - :notebook: TD: Monday 25/11/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
+
+- :book: Course: Thursday 28/11/2024, 10h15-12h15. Amphi B (Yannick Zakowski)
+
+  *Functions: semantics [slides in english](course/cap_cours09_func_semantics.pdf).
 
 # Week 11:
 
@@ -114,3 +122,7 @@ _Academic first semester 2024-2025_
     * Optimisations under SSA form [TP5c](TP05/tp5c.pdf), code in [MiniC/TPoptim/](MiniC/TPoptim/).
     * Parsing and typechecking functions [TP06a](TP06/tp6a.pdf), code in [MiniC/](MiniC/).
     * Code generation for functions [TP06b](TP06/tp6b.pdf), code in [MiniC/](MiniC/).  
+
+- :book: Course: Thursday 05/12/2024, 10h15-12h15. Amphi B (Yannick Zakowski)
+
+  * On parallelism [slides in english](course/cap_cours10_parallelism.pdf).
