@@ -113,7 +113,7 @@ _Academic first semester 2024-2025_
 
 - :book: Course: Thursday 28/11/2024, 10h15-12h15. Amphi B (Yannick Zakowski)
 
-  *Functions: semantics [slides in english](course/cap_cours09_func_semantics.pdf).
+  * Functions: semantics [slides in english](course/cap_cour309_func_semantics.pdf).
 
 # Week 11:
 
@@ -126,3 +126,12 @@ _Academic first semester 2024-2025_
 - :book: Course: Thursday 05/12/2024, 10h15-12h15. Amphi B (Yannick Zakowski)
 
   * On parallelism [slides in english](course/cap_cours10_parallelism.pdf).
+
+# Week 12:
+
+- :hammer: Choice Lab (2/3): Thursday 09/12/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
+
+    * Optimisations under SSA form [TP5c](TP05/tp5c.pdf), code in [MiniC/TPoptim/](MiniC/TPoptim/).
+    * Parsing and typechecking functions [TP06a](TP06/tp6a.pdf), code in [MiniC/](MiniC/).
+    * Code generation for functions [TP06b](TP06/tp6b.pdf), code in [MiniC/](MiniC/).  
+    * Going Parallel with futures [TPfutures](TPfutures/tpfutures.pdf), code in [TPfutures/MiniC-futures/](TPfutures/MiniC-futures/).
