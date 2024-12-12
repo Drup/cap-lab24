@@ -135,3 +135,9 @@ _Academic first semester 2024-2025_
     * Parsing and typechecking functions [TP06a](TP06/tp6a.pdf), code in [MiniC/](MiniC/).
     * Code generation for functions [TP06b](TP06/tp6b.pdf), code in [MiniC/](MiniC/).  
     * Going Parallel with futures [TPfutures](TPfutures/tpfutures.pdf), code in [TPfutures/MiniC-futures/](TPfutures/MiniC-futures/).
+
+- :book: Course: Thursday 12/12/2024, 10h15-12h15. Amphi B (Yannick Zakowski)
+
+  * Verified Compilation [introduction slides](course/cap_cours11_verified.pdf).
+  * Course on black board
+  * Additional resources: [Xavier Leroy's class at Collège de France](https://www.college-de-france.fr/en/agenda/lecture/mechanized-semantics-when-the-machine-reasons-about-its-languages)
