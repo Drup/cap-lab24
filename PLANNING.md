@@ -141,3 +141,7 @@ _Academic first semester 2024-2025_
   * Verified Compilation [introduction slides](course/cap_cours11_verified.pdf).
   * Course on black board
   * Additional resources: [Xavier Leroy's class at Collège de France](https://www.college-de-france.fr/en/agenda/lecture/mechanized-semantics-when-the-machine-reasons-about-its-languages)
+
+# Week 13:
+
+- :hammer: Choice Lab (3/3): Monday 16/12/2024, 13h30-15h30. Room E001 (Samuel Humeau & Emma Nardino)
